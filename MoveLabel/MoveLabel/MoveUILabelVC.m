@@ -12,6 +12,7 @@
 #import "RectTextView.h"
 
 #import "MoveView.h"
+#import "QRCodeView.h"
 
 @interface MoveUILabelVC()
 
@@ -36,7 +37,7 @@
     [self.view addSubview:self.rectTextView];
     self.rectTextView.frame = CGRectMake(50, 400, 240, 60);
     
-    _moveView = [[MoveView alloc] initWithFrame: CGRectMake(50, 100, 240, 60)];
+    _moveView = [[QRCodeView alloc] initWithFrame: CGRectMake(50, 100, 240, 60)];
     
     [self.view addSubview:self.moveView];
     _countRotate = 0;
