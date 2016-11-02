@@ -40,6 +40,7 @@
     
     [self.view addSubview:self.moveView];
     _countRotate = 0;
+    
 }
 
 - (RectTextView *)rectTextView {

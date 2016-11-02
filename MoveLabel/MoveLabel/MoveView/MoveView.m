@@ -47,10 +47,20 @@
         [self addGestureRecognizer:tapGesture];
         
         _editable = NO;
+        
+        [self addObserver:self forKeyPath:@"transform" options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;
 }
 
+-(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
+    
+    [self adjustArrowPosition];
+}
+
+-(void) dealloc{
+    [self removeObserver:self forKeyPath:@"transform"];
+}
 /**
  *  @brief 拖动View移动
  *
