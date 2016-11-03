@@ -1,6 +1,4 @@
-# iOS JavaScript与Native交互学习笔记
 
-------
 ## 通过UIWebView代理方法
 ```objc
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
@@ -98,13 +96,6 @@
             ```
         
         * 这个宏定义的方法在有多个参数的时候，js不用写很长的方法名，减少了前端的工作量。
-     
-## 总结
-
-运用JavaScriptCore这个系统库，更好的解决了与js交互的各种问题，减少了不必要的麻烦。不用再去使用第三方的库类，减少了项目的负载。
-
-—— 张鹏 2016.8.2
-  
 
 
 
