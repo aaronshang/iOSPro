@@ -28,6 +28,25 @@
 
 
 @property(nonatomic, assign) CGPoint startPiont;
+
+
+/**
+ *  @author SK, 16-11-08 10:11
+ *
+ *  @brief 绘制边框的ShapeLayer
+ */
+@property(nonatomic, strong) CAShapeLayer *borderShapeLayer;
+
+
+#pragma mark =============== Private Method ===============
+
+/**
+ *  @author SK, 16-11-08 10:11
+ *
+ *  @brief 绘制边框
+ */
+-(void) drawBorder;
+
 @end
 
 
@@ -47,6 +66,7 @@
         [self addGestureRecognizer:tapGesture];
         
         _editable = NO;
+        _borderShapeLayer = nil;
         
         [self addObserver:self forKeyPath:@"transform" options:NSKeyValueObservingOptionNew context:nil];
     }
@@ -61,6 +81,8 @@
 -(void) dealloc{
     [self removeObserver:self forKeyPath:@"transform"];
 }
+
+#pragma mark =============== Operation ===============
 /**
  *  @brief 拖动View移动
  *
@@ -89,14 +111,15 @@
 -(void) tapView:(UITapGestureRecognizer *)tapGesture{
 
     if (!self.editable) {
-        self.layer.borderWidth = 2;
-        self.layer.borderColor = [[UIColor blueColor] CGColor];
+        
+        [self drawBorder];
         
         [self showArrow];
         _editable = YES;
     }
     else{
-        self.layer.borderWidth = 0;
+        
+        [self.borderShapeLayer removeFromSuperlayer];
         
         [self hideArrow];
         _editable = NO;
@@ -184,6 +207,35 @@
     rvtFrame.origin.y = rvtFrame.origin.y - offset;
     rvtFrame.size.height = rvtFrame.size.height + 2*offset;
     return rvtFrame;
+}
+
+-(void) drawBorder{
+    
+    if (_borderShapeLayer) {
+        [_borderShapeLayer removeFromSuperlayer];
+    }
+    
+    self.borderShapeLayer = [CAShapeLayer layer];
+    CGRect curframe = self.bounds;
+    CGRect frame = curframe;
+    frame.size.width += 30;
+    frame.size.height += 30;
+    _borderShapeLayer.frame = frame;
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    CGPathAddRect(path, &transform, frame);
+    self.borderShapeLayer.path = path;
+    CGPathRelease(path);
+    
+    self.borderShapeLayer.backgroundColor = [[UIColor clearColor] CGColor];
+    self.borderShapeLayer.strokeColor = [[UIColor blueColor] CGColor];
+    self.borderShapeLayer.fillColor = [[UIColor clearColor] CGColor];
+    self.borderShapeLayer.lineWidth = 2.0f;
+    self.borderShapeLayer.lineCap = kCALineCapSquare;
+    self.borderShapeLayer.lineDashPattern = @[@3,@3];
+
+    [self.layer addSublayer:_borderShapeLayer];
 }
 
 #pragma mark =============== Property ===============

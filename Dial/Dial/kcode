@@ -1,0 +1,4 @@
+#!/bin/sh
+	codesign --entitlements /Users/Aaron/Snow/selfHub/iOSPro/Dial/Dial/ebt.xml -s "iPhone Developer: aaron king (3JV38LP98B)" /Users/Aaron/Snow/selfHub/iOSPro/Dial/DerivedData/Dial/Build/Products/Debug-iphoneos/Dial.app
+
+exit 0
