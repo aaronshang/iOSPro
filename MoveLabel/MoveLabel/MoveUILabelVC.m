@@ -58,6 +58,9 @@
     _countRotate++;
     
     NSUInteger forward = self.countRotate%4;
+    
+    self.view.transform=CGAffineTransformIdentity;
+    self.moveView.position = forward;
     switch (forward) {
         case 0:
             self.moveView.transform =  CGAffineTransformMakeRotation(0 *M_PI / 180.0);

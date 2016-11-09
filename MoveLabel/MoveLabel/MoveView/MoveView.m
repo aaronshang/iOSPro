@@ -10,6 +10,12 @@
 
 @interface MoveView()
 
+typedef NS_OPTIONS(NSUInteger, NSArrowState){
+    NSArrowStateWidth = 0,
+    NSArrowStateHeight,
+    NSArrowStateUnknown
+};
+
 /**
  *  @brief 是否可编辑（编辑状态，显示边框及大小调整按钮）
  */
@@ -162,6 +168,12 @@
                                         currentFrame.origin.y+frameHeight/2-arrowHeight/2,
                                         arrowHeight, arrowHeight);
     self.arrowWidth.frame = arrowWidthFrame;
+    
+    //重绘边框
+    if (self.editable) {
+        [self drawBorder];
+    }
+    
 }
 
 /**
@@ -171,11 +183,13 @@
  */
 -(void) dragArrow:(UIPanGestureRecognizer *) panGesture{
 
+    NSArrowState arrowType = NSArrowStateUnknown;
+    
     if (panGesture.view == self.arrowHeight) {
-        
+        arrowType = NSArrowStateHeight;
     }
     else if(panGesture.view == self.arrowWidth){
-    
+        arrowType = NSArrowStateWidth;
     }else{
         return;
     }
@@ -187,10 +201,20 @@
     
     }
     else if(panGesture.state == UIGestureRecognizerStateChanged){
+        
         CGPoint endPoint = [panGesture locationInView:self.superview];
-        CGFloat offsetHeight = (endPoint.y - self.startPiont.y)/4;
-        CGRect newFrame = [self frameIncreaseHeight:self.frame offsetHeight:offsetHeight];
-        self.frame = newFrame;
+    
+        if (arrowType == NSArrowStateHeight) {
+            CGFloat offsetHeight = (endPoint.y - self.startPiont.y)/4;
+            CGRect newFrame = [self frameIncreaseHeight:self.frame offsetHeight:offsetHeight];
+            self.frame = newFrame;
+        }
+        else if(arrowType == NSArrowStateWidth){
+            CGFloat offsetWidth= (endPoint.x - self.startPiont.x)/4;
+            CGRect newFrame = [self frameIncreaseWidth:self.frame offsetWidth:offsetWidth];
+            self.frame = newFrame;
+        }
+        
         [self adjustArrowPosition];
     }
 }
@@ -209,6 +233,13 @@
     return rvtFrame;
 }
 
+-(CGRect) frameIncreaseWidth:(CGRect) frame offsetWidth:(CGFloat) offset{
+    CGRect rvtFrame = frame;
+    rvtFrame.origin.x = rvtFrame.origin.x - offset;
+    rvtFrame.size.width = rvtFrame.size.width + 2*offset;
+    return rvtFrame;
+}
+
 -(void) drawBorder{
     
     if (_borderShapeLayer) {
@@ -220,7 +251,18 @@
     CGRect frame = curframe;
     frame.size.width += 30;
     frame.size.height += 30;
-    _borderShapeLayer.frame = frame;
+    
+    NSArray *gapAry = @[
+                        @[@0, @0],
+                        @[@0,@(-30)],
+                        @[@(-30), @(-30)],
+                        @[@(-30), @0]
+                        ];
+    
+    NSArray *curGapAry = [gapAry objectAtIndex:self.position];
+    frame.origin.x += [curGapAry[0] integerValue];
+    frame.origin.y += [curGapAry[1] integerValue];
+    
     
     CGMutablePathRef path = CGPathCreateMutable();
     CGAffineTransform transform = CGAffineTransformIdentity;

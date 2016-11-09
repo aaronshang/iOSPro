@@ -25,4 +25,10 @@
 
 @interface MoveView : UIView
 
+/**
+ *  @author SK, 16-11-09 15:11
+ *
+ *  @brief 位置关系 0，1，2，3-【原始位置、顺时针90、顺时针180、顺时针270】
+ */
+@property (nonatomic, assign) NSUInteger position;
 @end
