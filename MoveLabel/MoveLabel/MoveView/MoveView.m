@@ -17,30 +17,33 @@ typedef NS_OPTIONS(NSUInteger, NSArrowState){
 };
 
 /**
- *  @brief 是否可编辑（编辑状态，显示边框及大小调整按钮）
+ *  @author SK, 16-11-17 15:11
+ *
+ *  @brief 定义图片的方向
  */
+typedef NS_ENUM(NSInteger, NSViewForward) {
+ 
+    NSViewForwardHeight=0,
+    NSViewForwardWidth,
+    NSViewForwardHeightAndWidth
+};
+
+//是否可编辑（编辑状态，显示边框及大小调整按钮）
 @property(nonatomic, assign) BOOL editable;
 
-/**
- *  @brief 调整高度的按钮（vertical）
- */
+//调整高度的按钮（vertical）
 @property(nonatomic, strong) UIImageView *arrowHeight;
 
-
-/**
- *  @brief 调整宽度的按钮 (horizontal)
- */
+//调整宽度的按钮 (horizontal)
 @property(nonatomic, strong) UIImageView *arrowWidth;
 
-
+//拖动开始时，起始位置点
 @property(nonatomic, assign) CGPoint startPiont;
 
+//拖动开始时，Frame
+@property(nonatomic, assign) CGRect startFrameBeginDrag;
 
-/**
- *  @author SK, 16-11-08 10:11
- *
- *  @brief 绘制边框的ShapeLayer
- */
+//绘制边框的ShapeLayer
 @property(nonatomic, strong) CAShapeLayer *borderShapeLayer;
 
 
@@ -52,6 +55,7 @@ typedef NS_OPTIONS(NSUInteger, NSArrowState){
  *  @brief 绘制边框
  */
 -(void) drawBorder;
+
 
 @end
 
@@ -103,8 +107,11 @@ typedef NS_OPTIONS(NSUInteger, NSArrowState){
     
     }
     else if(panGesture.state == UIGestureRecognizerStateChanged){
-        CGPoint endPoint = [panGesture locationInView:self.superview];
-        self.center = endPoint;
+        
+        CGPoint offset = [panGesture translationInView:self.superview];
+        panGesture.view.center = CGPointMake(panGesture.view.center.x+offset.x, panGesture.view.center.y+offset.y);
+
+        [panGesture setTranslation:CGPointMake(0, 0) inView:self.superview];
         [self adjustArrowPosition];
     }
 }
@@ -176,6 +183,7 @@ typedef NS_OPTIONS(NSUInteger, NSArrowState){
     
 }
 
+#pragma mark =============== Drag Arrow ===============
 /**
  *  @brief 点击箭头按钮，拖动视图
  *
@@ -196,6 +204,8 @@ typedef NS_OPTIONS(NSUInteger, NSArrowState){
     
     if (panGesture.state == UIGestureRecognizerStateBegan) {
         _startPiont = [panGesture locationInView:self.superview];
+        _startFrameBeginDrag = self.frame;
+        NSLog(@"start %@", NSStringFromCGPoint(_startPiont));
     }
     else if(panGesture.state == UIGestureRecognizerStateEnded){
     
@@ -203,14 +213,15 @@ typedef NS_OPTIONS(NSUInteger, NSArrowState){
     else if(panGesture.state == UIGestureRecognizerStateChanged){
         
         CGPoint endPoint = [panGesture locationInView:self.superview];
+        NSLog(@"end %@", NSStringFromCGPoint(endPoint));
     
         if (arrowType == NSArrowStateHeight) {
-            CGFloat offsetHeight = (endPoint.y - self.startPiont.y)/4;
+            CGFloat offsetHeight = (endPoint.y - self.startPiont.y);
             CGRect newFrame = [self frameIncreaseHeight:self.frame offsetHeight:offsetHeight];
             self.frame = newFrame;
         }
         else if(arrowType == NSArrowStateWidth){
-            CGFloat offsetWidth= (endPoint.x - self.startPiont.x)/4;
+            CGFloat offsetWidth= (endPoint.x - self.startPiont.x);
             CGRect newFrame = [self frameIncreaseWidth:self.frame offsetWidth:offsetWidth];
             self.frame = newFrame;
         }
@@ -227,16 +238,18 @@ typedef NS_OPTIONS(NSUInteger, NSArrowState){
  *  @return 调整后的位置
  */
 -(CGRect) frameIncreaseHeight:(CGRect) frame offsetHeight:(CGFloat) offset{
-    CGRect rvtFrame = frame;
-    rvtFrame.origin.y = rvtFrame.origin.y - offset;
-    rvtFrame.size.height = rvtFrame.size.height + 2*offset;
+    CGRect rvtFrame = _startFrameBeginDrag;
+    CGFloat newOffset = [self offsetWidthAfterDraged:self.startFrameBeginDrag offset:offset forward:NSViewForwardHeight];
+    rvtFrame.origin.y = rvtFrame.origin.y - newOffset;
+    rvtFrame.size.height = rvtFrame.size.height + 2*newOffset;
     return rvtFrame;
 }
 
 -(CGRect) frameIncreaseWidth:(CGRect) frame offsetWidth:(CGFloat) offset{
-    CGRect rvtFrame = frame;
-    rvtFrame.origin.x = rvtFrame.origin.x - offset;
-    rvtFrame.size.width = rvtFrame.size.width + 2*offset;
+    CGRect rvtFrame = _startFrameBeginDrag;
+    CGFloat newOffset = [self offsetWidthAfterDraged:self.startFrameBeginDrag offset:offset forward:NSViewForwardWidth];
+    rvtFrame.origin.x = rvtFrame.origin.x - newOffset;
+    rvtFrame.size.width = rvtFrame.size.width + 2*newOffset;
     return rvtFrame;
 }
 
@@ -308,6 +321,43 @@ typedef NS_OPTIONS(NSUInteger, NSArrowState){
     }
 
     return _arrowWidth;
+}
+
+#pragma mark =============== 私有算法 ===============
+
+/**
+ *  @author SK, 16-11-17 15:11
+ *
+ *  @brief 返回拖动后的偏移量，范围受控制
+ *
+ *  @param frame  变化前大小
+ *  @param offset 偏移量
+ *
+ *  @return 算法校正后的偏移量
+ */
+-(CGFloat) offsetWidthAfterDraged:(CGRect) frame offset:(CGFloat) offset forward:(NSViewForward) forward{
+    
+    CGFloat rvtOffset = offset;
+    const CGFloat max = 1;
+    const CGFloat min = 0.5;
+    if (forward == NSViewForwardHeight) {
+        
+        if (offset>0) {
+            rvtOffset = (offset > max*frame.size.height)?max*frame.size.height:offset;
+        }else{
+            rvtOffset = (fabs(offset) > min*frame.size.height)?min*frame.size.height:offset;
+        }
+    
+    }
+    else if(forward == NSViewForwardWidth){
+    
+        if (offset>0) {
+           rvtOffset = (offset > max*frame.size.width)?max*frame.size.width:offset;
+        }else{
+            rvtOffset = (fabs(offset) > min*frame.size.width)?min*frame.size.width:offset;
+        }
+    }
+    return rvtOffset;
 }
 
 @end

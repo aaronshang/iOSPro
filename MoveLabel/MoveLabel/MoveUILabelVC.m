@@ -59,25 +59,28 @@
     
     NSUInteger forward = self.countRotate%4;
     
-    self.view.transform=CGAffineTransformIdentity;
+    CGAffineTransform transfrom = CGAffineTransformIdentity;
+    
     self.moveView.position = forward;
     switch (forward) {
         case 0:
-            self.moveView.transform =  CGAffineTransformMakeRotation(0 *M_PI / 180.0);
+            transfrom =  CGAffineTransformMakeRotation(360 *M_PI / 180.0);
+            
             break;
         case 1:
-            self.moveView.transform =  CGAffineTransformMakeRotation(90 *M_PI / 180.0);
+            transfrom =  CGAffineTransformMakeRotation(90 *M_PI / 180.0);
             break;
         case 2:
-            self.moveView.transform =  CGAffineTransformMakeRotation(180 *M_PI / 180.0);
+            transfrom =  CGAffineTransformMakeRotation(180 *M_PI / 180.0);
             break;
         case 3:
-            self.moveView.transform =  CGAffineTransformMakeRotation(270 *M_PI / 180.0);
+            transfrom =  CGAffineTransformMakeRotation(270 *M_PI / 180.0);
             break;
         default:
             break;
     }
     
+    self.moveView.transform = transfrom;
     
 }
 
