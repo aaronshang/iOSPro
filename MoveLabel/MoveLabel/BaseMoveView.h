@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "LBorderView.h"
 @interface BaseMoveView : LBorderView
 
 @end

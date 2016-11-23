@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseMoveView.h"
 
-@interface RectTextView : BaseMoveView
+@interface RectTextView : UIView
 
 @end

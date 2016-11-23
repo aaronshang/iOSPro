@@ -7,27 +7,9 @@
 //
 
 #import "RectTextView.h"
-#import "BaseMoveView.h"
 #import "ViewMoveTool.h"
 
 @implementation RectTextView
 
-
-//
-//
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    
-//
-//    [[ViewMoveTool sharedViewMoveTool] addMoveCorner:self];
-//
-//}
-
-//- (instancetype)initWithFrame:(CGRect)frame {
-//    if (self = [super initWithFrame:frame]) {
-//        
-//        self.userInteractionEnabled = YES;
-//    }
-//    return self;
-//}
 
 @end

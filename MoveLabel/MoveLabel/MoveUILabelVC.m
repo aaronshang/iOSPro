@@ -7,8 +7,7 @@
 //
 
 #import "MoveUILabelVC.h"
-//#import "Masonry.h"
-#import "BaseMoveView.h"
+
 #import "RectTextView.h"
 
 #import "MoveView.h"
@@ -16,7 +15,7 @@
 
 @interface MoveUILabelVC()
 
-@property (nonatomic, strong) BaseMoveView *baseMoveView;
+@property (nonatomic, strong) UIView *baseMoveView;
 
 @property (nonatomic, strong) RectTextView *rectTextView;
 
