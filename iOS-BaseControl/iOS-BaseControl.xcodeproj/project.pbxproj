@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		931FF9251DEC6E840002A70E /* UIView+SavePng.m in Sources */ = {isa = PBXBuildFile; fileRef = 931FF9241DEC6E840002A70E /* UIView+SavePng.m */; };
 		9353C02B1DE9288B00A2D2D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9353C02A1DE9288B00A2D2D6 /* main.m */; };
 		9353C02E1DE9288B00A2D2D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9353C02D1DE9288B00A2D2D6 /* AppDelegate.m */; };
 		9353C0311DE9288B00A2D2D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9353C0301DE9288B00A2D2D6 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		931FF9231DEC6E840002A70E /* UIView+SavePng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SavePng.h"; sourceTree = "<group>"; };
+		931FF9241DEC6E840002A70E /* UIView+SavePng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SavePng.m"; sourceTree = "<group>"; };
 		9353C0261DE9288B00A2D2D6 /* iOS-BaseControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-BaseControl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9353C02A1DE9288B00A2D2D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9353C02C1DE9288B00A2D2D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		931FF9221DEC6DDB0002A70E /* SavePng */ = {
+			isa = PBXGroup;
+			children = (
+				931FF9231DEC6E840002A70E /* UIView+SavePng.h */,
+				931FF9241DEC6E840002A70E /* UIView+SavePng.m */,
+			);
+			path = SavePng;
+			sourceTree = "<group>";
+		};
 		9353C01D1DE9288B00A2D2D6 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +77,7 @@
 		9353C0281DE9288B00A2D2D6 /* iOS-BaseControl */ = {
 			isa = PBXGroup;
 			children = (
+				931FF9221DEC6DDB0002A70E /* SavePng */,
 				9353C0401DE92A7F00A2D2D6 /* BCMoveView */,
 				9353C02C1DE9288B00A2D2D6 /* AppDelegate.h */,
 				9353C02D1DE9288B00A2D2D6 /* AppDelegate.m */,
@@ -171,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9353C0311DE9288B00A2D2D6 /* ViewController.m in Sources */,
+				931FF9251DEC6E840002A70E /* UIView+SavePng.m in Sources */,
 				9353C02E1DE9288B00A2D2D6 /* AppDelegate.m in Sources */,
 				9353C02B1DE9288B00A2D2D6 /* main.m in Sources */,
 				9353C0471DE92A7F00A2D2D6 /* MoveView.m in Sources */,

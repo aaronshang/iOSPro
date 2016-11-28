@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "BCMoveView/MoveView.h"
+#import "UIView+SavePng.h"
 
 @interface ViewController ()
 
@@ -35,6 +36,16 @@
 -(IBAction)rotatePicture:(id)sender{
     
     [self.moveView rotateView];
+    [self savePng];
+}
+
+-(void) savePng{
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSLog(@"path %@", path);
+    NSString *pngPath = [path stringByAppendingPathComponent:@"a.png"];
+    NSLog(@"path %@", pngPath);
+    [self.moveView clipScreenWithPath:pngPath type:NSPictureTypePNG];
 }
 
 @end
