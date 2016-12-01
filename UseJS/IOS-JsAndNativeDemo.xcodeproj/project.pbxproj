@@ -23,6 +23,7 @@
 		6E4B5C671D643D3B006FD478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4B5C651D643D3B006FD478 /* Main.storyboard */; };
 		6E4B5C691D643D3B006FD478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4B5C681D643D3B006FD478 /* Assets.xcassets */; };
 		6E4B5C6C1D643D3B006FD478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4B5C6A1D643D3B006FD478 /* LaunchScreen.storyboard */; };
+		934CD7E81DEFD15E002A7590 /* dog.html in Resources */ = {isa = PBXBuildFile; fileRef = 934CD7E71DEFD15E002A7590 /* dog.html */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		6E4B5C6D1D643D3B006FD478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4B5C761D643D3C006FD478 /* IOS_JsAndNativeDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOS_JsAndNativeDemoTests.m; sourceTree = "<group>"; };
 		6E4B5C781D643D3C006FD478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		934CD7E71DEFD15E002A7590 /* dog.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dog.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		6E4B5C5B1D643D3B006FD478 /* IOS-JsAndNativeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				934CD7E71DEFD15E002A7590 /* dog.html */,
 				6E1E68D71D6698B3007C93AB /* index3.html */,
 				6E4B5C5F1D643D3B006FD478 /* AppDelegate.h */,
 				6E4B5C601D643D3B006FD478 /* AppDelegate.m */,
@@ -215,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				934CD7E81DEFD15E002A7590 /* dog.html in Resources */,
 				6E1E68EF1D6AE463007C93AB /* SVProgressHUD.bundle in Resources */,
 				6E0EE3B51D70319500EB7DEB /* WebViewTest.xib in Resources */,
 				6E4B5C6C1D643D3B006FD478 /* LaunchScreen.storyboard in Resources */,

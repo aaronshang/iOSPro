@@ -26,7 +26,8 @@
     
     
     _webView.delegate = self;
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"index3" ofType:@"html"];
+//    NSString* path = [[NSBundle mainBundle] pathForResource:@"index3" ofType:@"html"];
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"dog" ofType:@"html"];
     
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:path]]];
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1,minimum-scale=0.3,maximum-scale=2">
+<link href="/Users/Aaron/Library/Developer/CoreSimulator/Devices/D7799F96-757C-4535-A811-8CEDD85F2B0B/data/Containers/Bundle/Application/D989DC45-7E13-4351-AE14-8B36DDC92B9F/码云.app/github.css" rel="stylesheet" type="text/css">
+<link href="/Users/Aaron/Library/Developer/CoreSimulator/Devices/D7799F96-757C-4535-A811-8CEDD85F2B0B/data/Containers/Bundle/Application/D989DC45-7E13-4351-AE14-8B36DDC92B9F/码云.app/code.css" rel="stylesheet" type="text/css">
+<script src="/Users/Aaron/Library/Developer/CoreSimulator/Devices/D7799F96-757C-4535-A811-8CEDD85F2B0B/data/Containers/Bundle/Application/D989DC45-7E13-4351-AE14-8B36DDC92B9F/码云.app/highlight.pack.js"></script>
+<script>
+	hljs.lineNodes = true;
+	hljs.initHighlightingOnLoad();
+    hljs.number();
+</script>
+<script src="jquery.js" type="text/javascript"></script>
+</head>
+<body>
+<pre><code id="code" class="h">//
+//  AppDelegate.h
+//  iOS-git-osc
+//
+//  Created by chenhaoxiang on 14-5-4.
+//  Copyright (c) 2014年 chenhaoxiang. All rights reserved.
+//
+
+#import &lt;UIKit/UIKit.h&gt;
+
+@interface AppDelegate : UIResponder &lt;UIApplicationDelegate&gt;
+
+@property (strong, nonatomic) UIWindow *window;
+
+@end
+</code></pre>
+<script>
+    function number() {
+        $('pre>code').each(function() {
+           var current = $(this),
+           lineStart = parseInt(current.data('line-start')),
+           lineFocus = parseInt(current.data('line-focus')),
+           items = current.html().split("\n"),
+           total = items.length,
+           result = '<ol ' + (!isNaN(lineStart) ? 'start="' + lineStart + '"' : '') + '>';
+           
+           for (var i = 0; i < total; i++) {
+               if (i === (lineFocus - lineStart)) {
+                   result += '<li class="hightlight">';
+               } else {
+                   result += '<li>';
+               }
+           
+               result += items[i] + '</li>';
+           }
+           
+           result += '</ol>';
+           
+           var items = current.empty().append(result);
+        });
+           
+    };
+
+number();
+</script>
+</body>
+</html>
