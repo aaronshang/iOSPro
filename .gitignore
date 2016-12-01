@@ -1,0 +1,10 @@
+_Store
+build
+.DS_Store
+*.lock
+.svn
+UserInterfaceState.xcuserstate
+xcuserdata
+*.class
+*.swp
+.pyc
