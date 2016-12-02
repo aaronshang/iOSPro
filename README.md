@@ -30,3 +30,8 @@
 
 1. 工具栏，可滑动
 2. MoveLabel，可缩放、拖动
+
+##### StoryBoard
+
+1. 控制器跳转
+2. 自动布局，实现Tableview Cell 删除动画效果
