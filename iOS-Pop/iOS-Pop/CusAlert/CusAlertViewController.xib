@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CusAlertViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3h-iH-Cpz">
+                    <rect key="frame" x="8" y="8" width="284" height="44"/>
+                    <items>
+                        <navigationItem title="新建工作蓝" id="Mw5-fE-ucY"/>
+                    </items>
+                </navigationBar>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="input something" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KxE-1j-Z9h">
+                    <rect key="frame" x="8" y="64" width="284" height="93"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="93" id="GCF-Xt-Mlu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-F1-d50">
+                    <rect key="frame" x="152" y="182" width="140" height="50"/>
+                    <state key="normal" title="确定"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8m-hu-UBG">
+                    <rect key="frame" x="8" y="182" width="140" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="hIv-4y-fyA"/>
+                        <constraint firstAttribute="height" constant="50" id="l3g-I8-HyE"/>
+                    </constraints>
+                    <state key="normal" title="取消"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="z8m-hu-UBG" firstAttribute="baseline" secondItem="vuT-F1-d50" secondAttribute="firstBaseline" id="4DF-ZC-ioB"/>
+                <constraint firstItem="d3h-iH-Cpz" firstAttribute="trailing" secondItem="vuT-F1-d50" secondAttribute="trailing" id="6e1-dV-nUi"/>
+                <constraint firstItem="d3h-iH-Cpz" firstAttribute="leading" secondItem="z8m-hu-UBG" secondAttribute="leading" id="8Qh-2u-3UX"/>
+                <constraint firstItem="z8m-hu-UBG" firstAttribute="firstBaseline" secondItem="vuT-F1-d50" secondAttribute="baseline" id="IW1-TX-vam"/>
+                <constraint firstItem="d3h-iH-Cpz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="Ixu-mY-OS5"/>
+                <constraint firstItem="vuT-F1-d50" firstAttribute="leading" secondItem="z8m-hu-UBG" secondAttribute="trailing" constant="4" id="NYQ-44-2cQ"/>
+                <constraint firstItem="z8m-hu-UBG" firstAttribute="top" secondItem="vuT-F1-d50" secondAttribute="top" id="Ne5-EM-Y6Q"/>
+                <constraint firstItem="d3h-iH-Cpz" firstAttribute="trailing" secondItem="KxE-1j-Z9h" secondAttribute="trailing" id="OUN-aJ-5In"/>
+                <constraint firstItem="KxE-1j-Z9h" firstAttribute="top" secondItem="d3h-iH-Cpz" secondAttribute="bottom" constant="12" id="aou-sl-w3L"/>
+                <constraint firstItem="vuT-F1-d50" firstAttribute="top" secondItem="KxE-1j-Z9h" secondAttribute="bottom" constant="25" id="b01-U7-lO7"/>
+                <constraint firstItem="d3h-iH-Cpz" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="hca-U7-3us"/>
+                <constraint firstItem="d3h-iH-Cpz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="rMM-8N-55E"/>
+                <constraint firstItem="d3h-iH-Cpz" firstAttribute="leading" secondItem="KxE-1j-Z9h" secondAttribute="leading" id="xfA-zF-te0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

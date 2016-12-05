@@ -20,6 +20,8 @@
 		932008E61DE09AD700BFEB62 /* LewPopupViewAnimationSpring.m in Sources */ = {isa = PBXBuildFile; fileRef = 932008DE1DE09AD700BFEB62 /* LewPopupViewAnimationSpring.m */; };
 		932008E71DE09AD700BFEB62 /* UIViewController+LewPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932008E11DE09AD700BFEB62 /* UIViewController+LewPopupViewController.m */; };
 		932008EA1DE09B0700BFEB62 /* PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 932008E91DE09B0700BFEB62 /* PopView.m */; };
+		938AB1381DF565A80083DEB4 /* CusAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938AB1361DF565A80083DEB4 /* CusAlertViewController.m */; };
+		938AB1391DF565A80083DEB4 /* CusAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938AB1371DF565A80083DEB4 /* CusAlertViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,9 @@
 		932008E11DE09AD700BFEB62 /* UIViewController+LewPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LewPopupViewController.m"; sourceTree = "<group>"; };
 		932008E81DE09B0700BFEB62 /* PopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopView.h; sourceTree = "<group>"; };
 		932008E91DE09B0700BFEB62 /* PopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopView.m; sourceTree = "<group>"; };
+		938AB1351DF565A80083DEB4 /* CusAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CusAlertViewController.h; sourceTree = "<group>"; };
+		938AB1361DF565A80083DEB4 /* CusAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CusAlertViewController.m; sourceTree = "<group>"; };
+		938AB1371DF565A80083DEB4 /* CusAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CusAlertViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +85,7 @@
 		932008BA1DE0989000BFEB62 /* iOS-Pop */ = {
 			isa = PBXGroup;
 			children = (
+				938AB1341DF565910083DEB4 /* CusAlert */,
 				932008D41DE09AD700BFEB62 /* PopupView */,
 				932008BE1DE0989000BFEB62 /* AppDelegate.h */,
 				932008BF1DE0989000BFEB62 /* AppDelegate.m */,
@@ -122,6 +128,16 @@
 				932008E11DE09AD700BFEB62 /* UIViewController+LewPopupViewController.m */,
 			);
 			path = PopupView;
+			sourceTree = "<group>";
+		};
+		938AB1341DF565910083DEB4 /* CusAlert */ = {
+			isa = PBXGroup;
+			children = (
+				938AB1351DF565A80083DEB4 /* CusAlertViewController.h */,
+				938AB1361DF565A80083DEB4 /* CusAlertViewController.m */,
+				938AB1371DF565A80083DEB4 /* CusAlertViewController.xib */,
+			);
+			path = CusAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				932008CB1DE0989000BFEB62 /* LaunchScreen.storyboard in Resources */,
+				938AB1391DF565A80083DEB4 /* CusAlertViewController.xib in Resources */,
 				932008C81DE0989000BFEB62 /* Assets.xcassets in Resources */,
 				932008C61DE0989000BFEB62 /* Main.storyboard in Resources */,
 			);
@@ -203,6 +220,7 @@
 				932008C31DE0989000BFEB62 /* ViewController.m in Sources */,
 				932008C01DE0989000BFEB62 /* AppDelegate.m in Sources */,
 				932008E21DE09AD700BFEB62 /* LewPopupBackgroundView.m in Sources */,
+				938AB1381DF565A80083DEB4 /* CusAlertViewController.m in Sources */,
 				932008BD1DE0989000BFEB62 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -304,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -352,6 +370,7 @@
 				932008D11DE0989000BFEB62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
