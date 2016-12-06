@@ -18,5 +18,7 @@
 
 -(IBAction) click:(id)sender;
 
+-(IBAction) clickCustomAlert:(id)sender;
+
 @end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64927361081102EAAE755DC4 /* libPods-iOS-Pop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9908A8296C547E98F2701721 /* libPods-iOS-Pop.a */; };
 		932008BD1DE0989000BFEB62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 932008BC1DE0989000BFEB62 /* main.m */; };
 		932008C01DE0989000BFEB62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 932008BF1DE0989000BFEB62 /* AppDelegate.m */; };
 		932008C31DE0989000BFEB62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932008C21DE0989000BFEB62 /* ViewController.m */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ACFBE5C745DD3D74D8ADEB7 /* Pods-iOS-Pop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Pop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Pop/Pods-iOS-Pop.debug.xcconfig"; sourceTree = "<group>"; };
+		787F75994D9ABDAB3B06E918 /* Pods-iOS-Pop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Pop.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-Pop/Pods-iOS-Pop.release.xcconfig"; sourceTree = "<group>"; };
 		932008B81DE0989000BFEB62 /* iOS-Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		932008BC1DE0989000BFEB62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		932008BE1DE0989000BFEB62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		938AB1351DF565A80083DEB4 /* CusAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CusAlertViewController.h; sourceTree = "<group>"; };
 		938AB1361DF565A80083DEB4 /* CusAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CusAlertViewController.m; sourceTree = "<group>"; };
 		938AB1371DF565A80083DEB4 /* CusAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CusAlertViewController.xib; sourceTree = "<group>"; };
+		9908A8296C547E98F2701721 /* libPods-iOS-Pop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-Pop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64927361081102EAAE755DC4 /* libPods-iOS-Pop.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +76,8 @@
 			children = (
 				932008BA1DE0989000BFEB62 /* iOS-Pop */,
 				932008B91DE0989000BFEB62 /* Products */,
+				B147AD2949FD58C395AC6619 /* Pods */,
+				D134E1177270E4236EBAF02A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,23 @@
 			path = CusAlert;
 			sourceTree = "<group>";
 		};
+		B147AD2949FD58C395AC6619 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ACFBE5C745DD3D74D8ADEB7 /* Pods-iOS-Pop.debug.xcconfig */,
+				787F75994D9ABDAB3B06E918 /* Pods-iOS-Pop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D134E1177270E4236EBAF02A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9908A8296C547E98F2701721 /* libPods-iOS-Pop.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 932008CF1DE0989000BFEB62 /* Build configuration list for PBXNativeTarget "iOS-Pop" */;
 			buildPhases = (
+				E1FD89F5A6FC14A88F9A5D95 /* [CP] Check Pods Manifest.lock */,
 				932008B41DE0989000BFEB62 /* Sources */,
 				932008B51DE0989000BFEB62 /* Frameworks */,
 				932008B61DE0989000BFEB62 /* Resources */,
+				D95DD61D52B4924960221F83 /* [CP] Embed Pods Frameworks */,
+				AD398EF45EC05D7212879CBC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +232,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AD398EF45EC05D7212879CBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-Pop/Pods-iOS-Pop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D95DD61D52B4924960221F83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-Pop/Pods-iOS-Pop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1FD89F5A6FC14A88F9A5D95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		932008B41DE0989000BFEB62 /* Sources */ = {
@@ -331,6 +406,7 @@
 		};
 		932008D01DE0989000BFEB62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ACFBE5C745DD3D74D8ADEB7 /* Pods-iOS-Pop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "iOS-Pop/Info.plist";
@@ -342,6 +418,7 @@
 		};
 		932008D11DE0989000BFEB62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 787F75994D9ABDAB3B06E918 /* Pods-iOS-Pop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "iOS-Pop/Info.plist";
