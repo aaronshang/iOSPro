@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GCDThread.h"
+#import "NSOperationThread.h"
 
 @interface ViewController ()
 
@@ -26,7 +27,10 @@
 }
 -(IBAction)test:(id)sender{
     
-    GCDThread *gcdThread = [[GCDThread alloc] init];
-    [gcdThread testAScene];
+//    GCDThread *gcdThread = [[GCDThread alloc] init];
+//    [gcdThread testAScene];
+    
+    NSOperationThread *opThread = [[NSOperationThread alloc] init];
+    [opThread test];
 }
 @end

@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		931AB3F81E07D14500555F96 /* NSOperationThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 931AB3F71E07D14500555F96 /* NSOperationThread.m */; };
 		93E03AD51DCB52360079F59F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E03AD41DCB52360079F59F /* main.m */; };
 		93E03AD81DCB52360079F59F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E03AD71DCB52360079F59F /* AppDelegate.m */; };
 		93E03ADB1DCB52360079F59F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E03ADA1DCB52360079F59F /* ViewController.m */; };
 		93E03ADE1DCB52360079F59F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E03ADC1DCB52360079F59F /* Main.storyboard */; };
 		93E03AE01DCB52360079F59F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E03ADF1DCB52360079F59F /* Assets.xcassets */; };
 		93E03AE31DCB52360079F59F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E03AE11DCB52360079F59F /* LaunchScreen.storyboard */; };
-		93E03AED1DCB554B0079F59F /* GCDThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E03AEC1DCB554B0079F59F /* GCDThread.m */; settings = {ASSET_TAGS = (); }; };
+		93E03AED1DCB554B0079F59F /* GCDThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E03AEC1DCB554B0079F59F /* GCDThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		931AB3F61E07D14500555F96 /* NSOperationThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSOperationThread.h; sourceTree = "<group>"; };
+		931AB3F71E07D14500555F96 /* NSOperationThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSOperationThread.m; sourceTree = "<group>"; };
 		93E03AD01DCB52360079F59F /* UseThread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UseThread.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E03AD41DCB52360079F59F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93E03AD61DCB52360079F59F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 			children = (
 				93E03AEB1DCB554B0079F59F /* GCDThread.h */,
 				93E03AEC1DCB554B0079F59F /* GCDThread.m */,
+				931AB3F61E07D14500555F96 /* NSOperationThread.h */,
+				931AB3F71E07D14500555F96 /* NSOperationThread.m */,
 			);
 			path = Thread;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			files = (
 				93E03AED1DCB554B0079F59F /* GCDThread.m in Sources */,
 				93E03ADB1DCB52360079F59F /* ViewController.m in Sources */,
+				931AB3F81E07D14500555F96 /* NSOperationThread.m in Sources */,
 				93E03AD81DCB52360079F59F /* AppDelegate.m in Sources */,
 				93E03AD51DCB52360079F59F /* main.m in Sources */,
 			);
@@ -312,6 +318,7 @@
 				93E03AE91DCB52360079F59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -35,3 +35,7 @@
 
 1. 控制器跳转
 2. 自动布局，实现Tableview Cell 删除动画效果
+
+##### Objective-C
+
+1. 基本语法，Mac OS下验证
