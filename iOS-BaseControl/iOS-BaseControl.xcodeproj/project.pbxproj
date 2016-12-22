@@ -17,6 +17,7 @@
 		9353C0471DE92A7F00A2D2D6 /* MoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9353C0441DE92A7F00A2D2D6 /* MoveView.m */; };
 		9353C0491DE92AE400A2D2D6 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 9353C0481DE92AE400A2D2D6 /* book.png */; };
 		9353C04B1DE92F9000A2D2D6 /* MoveViewSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9353C04A1DE92F9000A2D2D6 /* MoveViewSettings.bundle */; };
+		93D436481E0BB72D00F99290 /* UIViewController+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D436471E0BB72D00F99290 /* UIViewController+Tracking.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		9353C0441DE92A7F00A2D2D6 /* MoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveView.m; sourceTree = "<group>"; };
 		9353C0481DE92AE400A2D2D6 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
 		9353C04A1DE92F9000A2D2D6 /* MoveViewSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MoveViewSettings.bundle; sourceTree = "<group>"; };
+		93D436461E0BB72D00F99290 /* UIViewController+Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tracking.h"; sourceTree = "<group>"; };
+		93D436471E0BB72D00F99290 /* UIViewController+Tracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tracking.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 		9353C0281DE9288B00A2D2D6 /* iOS-BaseControl */ = {
 			isa = PBXGroup;
 			children = (
+				93D436451E0BB6E800F99290 /* Statis */,
 				931FF9221DEC6DDB0002A70E /* SavePng */,
 				9353C0401DE92A7F00A2D2D6 /* BCMoveView */,
 				9353C02C1DE9288B00A2D2D6 /* AppDelegate.h */,
@@ -109,6 +113,15 @@
 				9353C0441DE92A7F00A2D2D6 /* MoveView.m */,
 			);
 			path = BCMoveView;
+			sourceTree = "<group>";
+		};
+		93D436451E0BB6E800F99290 /* Statis */ = {
+			isa = PBXGroup;
+			children = (
+				93D436461E0BB72D00F99290 /* UIViewController+Tracking.h */,
+				93D436471E0BB72D00F99290 /* UIViewController+Tracking.m */,
+			);
+			path = Statis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +201,7 @@
 				9353C02E1DE9288B00A2D2D6 /* AppDelegate.m in Sources */,
 				9353C02B1DE9288B00A2D2D6 /* main.m in Sources */,
 				9353C0471DE92A7F00A2D2D6 /* MoveView.m in Sources */,
+				93D436481E0BB72D00F99290 /* UIViewController+Tracking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -288,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BCMoveView/MoveView.h"
 #import "UIView+SavePng.h"
+#import "UIViewController+Tracking.h"
 
 @interface ViewController ()
 
@@ -26,6 +27,11 @@
     _moveView = [[MoveView alloc] initWithFrame: CGRectMake(50, 100, 240, 60)];
     
     [self.view addSubview:self.moveView];
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"dog cat");
 }
 
 - (void)didReceiveMemoryWarning {
