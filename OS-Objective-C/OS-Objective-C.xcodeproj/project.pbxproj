@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		931E84391E0A548B00FE9431 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 931E84361E0A548B00FE9431 /* Car.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		931E843A1E0A548B00FE9431 /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = 931E84381E0A548B00FE9431 /* House.m */; settings = {ASSET_TAGS = (); }; };
+		931E843A1E0A548B00FE9431 /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = 931E84381E0A548B00FE9431 /* House.m */; };
 		936540191E0A1A1B00D74F27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 936540181E0A1A1B00D74F27 /* main.m */; };
+		9398CBB21E484764008C0707 /* Tire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398CBB11E484764008C0707 /* Tire.m */; };
+		9398CBB51E4847DA008C0707 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398CBB41E4847DA008C0707 /* Engine.m */; };
+		9398CBB81E4847F9008C0707 /* AllWeatherRadial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398CBB71E4847F9008C0707 /* AllWeatherRadial.m */; };
+		9398CBBB1E484843008C0707 /* RedCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398CBBA1E484843008C0707 /* RedCar.m */; };
+		9398CBBE1E4848BF008C0707 /* TestCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398CBBD1E4848BF008C0707 /* TestCar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +36,17 @@
 		931E84381E0A548B00FE9431 /* House.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = House.m; sourceTree = "<group>"; };
 		936540151E0A1A1B00D74F27 /* OS-Objective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OS-Objective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		936540181E0A1A1B00D74F27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9398CBAC1E4846B5008C0707 /* What's New.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "What's New.rtf"; sourceTree = "<group>"; };
+		9398CBB01E484764008C0707 /* Tire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tire.h; sourceTree = "<group>"; };
+		9398CBB11E484764008C0707 /* Tire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tire.m; sourceTree = "<group>"; };
+		9398CBB31E4847DA008C0707 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		9398CBB41E4847DA008C0707 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
+		9398CBB61E4847F9008C0707 /* AllWeatherRadial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllWeatherRadial.h; sourceTree = "<group>"; };
+		9398CBB71E4847F9008C0707 /* AllWeatherRadial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllWeatherRadial.m; sourceTree = "<group>"; };
+		9398CBB91E484843008C0707 /* RedCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedCar.h; sourceTree = "<group>"; };
+		9398CBBA1E484843008C0707 /* RedCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedCar.m; sourceTree = "<group>"; };
+		9398CBBC1E4848BF008C0707 /* TestCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCar.h; sourceTree = "<group>"; };
+		9398CBBD1E4848BF008C0707 /* TestCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 		9365400C1E0A1A1B00D74F27 = {
 			isa = PBXGroup;
 			children = (
+				9398CBAC1E4846B5008C0707 /* What's New.rtf */,
 				936540171E0A1A1B00D74F27 /* OS-Objective-C */,
 				936540161E0A1A1B00D74F27 /* Products */,
 			);
@@ -74,10 +91,28 @@
 		936540171E0A1A1B00D74F27 /* OS-Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				9398CBAB1E484670008C0707 /* NSCoping */,
 				931E84341E0A548B00FE9431 /* property */,
 				936540181E0A1A1B00D74F27 /* main.m */,
 			);
 			path = "OS-Objective-C";
+			sourceTree = "<group>";
+		};
+		9398CBAB1E484670008C0707 /* NSCoping */ = {
+			isa = PBXGroup;
+			children = (
+				9398CBB01E484764008C0707 /* Tire.h */,
+				9398CBB11E484764008C0707 /* Tire.m */,
+				9398CBB31E4847DA008C0707 /* Engine.h */,
+				9398CBB41E4847DA008C0707 /* Engine.m */,
+				9398CBB61E4847F9008C0707 /* AllWeatherRadial.h */,
+				9398CBB71E4847F9008C0707 /* AllWeatherRadial.m */,
+				9398CBB91E484843008C0707 /* RedCar.h */,
+				9398CBBA1E484843008C0707 /* RedCar.m */,
+				9398CBBC1E4848BF008C0707 /* TestCar.h */,
+				9398CBBD1E4848BF008C0707 /* TestCar.m */,
+			);
+			path = NSCoping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +173,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				931E84391E0A548B00FE9431 /* Car.m in Sources */,
+				9398CBB21E484764008C0707 /* Tire.m in Sources */,
+				9398CBBE1E4848BF008C0707 /* TestCar.m in Sources */,
 				931E843A1E0A548B00FE9431 /* House.m in Sources */,
 				936540191E0A1A1B00D74F27 /* main.m in Sources */,
+				9398CBBB1E484843008C0707 /* RedCar.m in Sources */,
+				9398CBB51E4847DA008C0707 /* Engine.m in Sources */,
+				9398CBB81E4847F9008C0707 /* AllWeatherRadial.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +224,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos9.0;
+				SDKROOT = macosx10.12;
 			};
 			name = Debug;
 		};
@@ -219,7 +259,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos9.0;
+				SDKROOT = macosx10.12;
 			};
 			name = Release;
 		};
@@ -227,7 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.11;
+				SDKROOT = macosx10.12;
 			};
 			name = Debug;
 		};
@@ -235,7 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.11;
+				SDKROOT = macosx10.12;
 			};
 			name = Release;
 		};

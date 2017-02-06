@@ -8,24 +8,28 @@
 
 #import <Foundation/Foundation.h>
 #import "House.h"
+#import "TestCar.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
-    
-        NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
-            
-            int i=0;
-            while (i<10) {
-                House *house = [[House alloc] init];
-                [house runCar];
-                sleep(1);
-                i++;
-            }
-        }];
         
-        [op start];
+        TestCar *testCar = [[TestCar alloc] init];
+        [testCar testCopyObject];
+    
+//        NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
+//            
+//            int i=0;
+//            while (i<10) {
+//                House *house = [[House alloc] init];
+//                [house runCar];
+//                sleep(1);
+//                i++;
+//            }
+//        }];
+//        
+//        [op start];
     }
     return 0;
 }
