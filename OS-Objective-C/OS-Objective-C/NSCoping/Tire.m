@@ -12,7 +12,9 @@
 
 -(id)copyWithZone:(NSZone *)zone{
     
-    Tire *copyTire = [[self class] allocWithZone:zone];
+    Tire *copyTire = [[[self class] allocWithZone:zone] init];
+    [copyTire setPressure:_pressure];
+    [copyTire setName:_name];
     return copyTire;
 }
 

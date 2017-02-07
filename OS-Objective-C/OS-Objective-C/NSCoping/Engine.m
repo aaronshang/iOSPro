@@ -12,7 +12,7 @@
 
 -(id) copyWithZone:(NSZone *)zone{
 
-    Engine *copyEngine = [[self class] allocWithZone:zone];
+    Engine *copyEngine = [[[self class] allocWithZone:zone] init];
     return copyEngine;
 }
 

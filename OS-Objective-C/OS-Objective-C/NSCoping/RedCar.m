@@ -23,7 +23,13 @@
 
 - (id)copyWithZone:(nullable NSZone *)zone{
     
-    RedCar *copyCar = [[self class] allocWithZone:zone];
+    RedCar *copyCar = [[[self class] allocWithZone:zone] init];
+    
+    for(AllWeatherRadial *tire in _tireAry){
+        
+        AllWeatherRadial *copyTire = [tire copy];
+        [copyCar.tireAry addObject:copyTire];
+    }
     return copyCar;
 }
 

@@ -14,6 +14,7 @@
 
     AllWeatherRadial *copyRadial = [super copyWithZone:zone];
     
+    [copyRadial setRainHandling:_rainHandling];
     return copyRadial;
 }
 

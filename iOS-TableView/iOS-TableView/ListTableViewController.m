@@ -8,6 +8,7 @@
 
 #import "ListTableViewController.h"
 #import <MJRefresh/MJRefresh.h>
+#import "CustomTableViewCell.h"
 
 @interface ListTableViewController ()
 
@@ -29,7 +30,7 @@
     [self back];
     
     _sourceAry = [NSMutableArray array];
-    for (int i=0; i<100; i++) {
+    for (int i=0; i<30; i++) {
         [_sourceAry addObject:[NSString stringWithFormat:@"Apple%d", i]];
     }
     
@@ -56,6 +57,8 @@
     self.tableView.mj_header = header;
     
     [self.tableView.mj_header beginRefreshing];
+    
+    [self.tableView registerClass:[CustomTableViewCell class] forCellReuseIdentifier:@"CustomCellID"];
 }
 
 -(void) back{
@@ -90,13 +93,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CELLID = @"ABDASFCELLID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLID];
+//    static NSString *CELLID = @"ABDASFCELLID";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLID];
+//    
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELLID];
+//    }
+//    cell.textLabel.text = self.sourceAry[indexPath.row];
+//    return cell;
     
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELLID];
-    }
-    cell.textLabel.text = self.sourceAry[indexPath.row];
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCellID" forIndexPath:indexPath];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row];
     return cell;
 }
 

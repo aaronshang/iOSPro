@@ -13,8 +13,9 @@
 		934CD8001DF00A64002A7590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934CD7FE1DF00A64002A7590 /* Main.storyboard */; };
 		934CD8021DF00A64002A7590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934CD8011DF00A64002A7590 /* Assets.xcassets */; };
 		934CD8051DF00A64002A7590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934CD8031DF00A64002A7590 /* LaunchScreen.storyboard */; };
-		934CD80E1DF00AD9002A7590 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934CD80D1DF00AD9002A7590 /* ListTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		934CD8101DF00B0F002A7590 /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934CD80F1DF00B0F002A7590 /* ListTableViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		934CD80E1DF00AD9002A7590 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934CD80D1DF00AD9002A7590 /* ListTableViewController.m */; };
+		934CD8101DF00B0F002A7590 /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934CD80F1DF00B0F002A7590 /* ListTableViewController.xib */; };
+		93D83DC81E30B2A800A5950D /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D83DC71E30B2A800A5950D /* CustomTableViewCell.m */; };
 		9DF147747A8B073C8825F0C6 /* libPods-iOS-TableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A497F8B5F290AFF3FF03FBED /* libPods-iOS-TableView.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 		934CD80C1DF00AD9002A7590 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
 		934CD80D1DF00AD9002A7590 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		934CD80F1DF00B0F002A7590 /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
+		93D83DC61E30B2A800A5950D /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		93D83DC71E30B2A800A5950D /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		A497F8B5F290AFF3FF03FBED /* libPods-iOS-TableView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-TableView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,6 +81,8 @@
 		934CD7F41DF00A64002A7590 /* iOS-TableView */ = {
 			isa = PBXGroup;
 			children = (
+				93D83DC61E30B2A800A5950D /* CustomTableViewCell.h */,
+				93D83DC71E30B2A800A5950D /* CustomTableViewCell.m */,
 				934CD80C1DF00AD9002A7590 /* ListTableViewController.h */,
 				934CD80D1DF00AD9002A7590 /* ListTableViewController.m */,
 				934CD80F1DF00B0F002A7590 /* ListTableViewController.xib */,
@@ -236,6 +241,7 @@
 				934CD7FD1DF00A64002A7590 /* ViewController.m in Sources */,
 				934CD7FA1DF00A64002A7590 /* AppDelegate.m in Sources */,
 				934CD7F71DF00A64002A7590 /* main.m in Sources */,
+				93D83DC81E30B2A800A5950D /* CustomTableViewCell.m in Sources */,
 				934CD80E1DF00AD9002A7590 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
